@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cswj0vq8ay5pb"]
+
+[ext_resource type="Script" path="res://scenes/pick_up.gd" id="1_foqik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxnbk"]
+size = Vector2(222, 236)
+
+[node name="PickUp" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_foqik")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-98, -131, 122, -129, 134, 111, -108, 111)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -13)
+shape = SubResource("RectangleShape2D_uxnbk")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

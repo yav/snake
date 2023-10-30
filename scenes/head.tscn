@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://pgtm7vk7rbs"]
+
+[ext_resource type="Script" path="res://scripts/head.gd" id="1_115e3"]
+
+[node name="Head" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 13
+motion_mode = 1
+script = ExtResource("1_115e3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -92, 59, -6, 2, 85)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 87, 58, -5, 1, -91)
+
+[node name="Fragments" type="Node" parent="."]

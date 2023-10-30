@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dext52pwryel2"]
+
+[ext_resource type="PackedScene" uid="uid://cswj0vq8ay5pb" path="res://scenes/pick_up.tscn" id="1_jbjdp"]
+[ext_resource type="PackedScene" uid="uid://pgtm7vk7rbs" path="res://scenes/head.tscn" id="1_yb5cc"]
+[ext_resource type="PackedScene" uid="uid://do1o808kwiuim" path="res://scenes/block.tscn" id="2_vtdld"]
+
+[node name="Main" type="Node2D"]
+
+[node name="PickUp" parent="." instance=ExtResource("1_jbjdp")]
+position = Vector2(572, 510)
+scale = Vector2(0.2, 0.2)
+
+[node name="Head" parent="." instance=ExtResource("1_yb5cc")]
+position = Vector2(266, 280)
+
+[node name="Block" parent="." instance=ExtResource("2_vtdld")]
+position = Vector2(914, 288)
